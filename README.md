@@ -4,7 +4,7 @@ A lot has changed since I last used it, but I attempted to do it via hooks over 
 
 I also attempted to not use additional libraries or frameworks to show you my direct approach to the problems given.
 
-Form validation was not used as it was not expanded on in the requirements (and addresses get wildly complex). 
+Form validation was not used as it was not listed in the requirements, otherwise this is something I would normally implement.
 
 ---
 

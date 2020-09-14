@@ -7,16 +7,16 @@ import HCardForm from "./HCardForm";
 
 const App = () => {
 
-  const [givenName, setGivenName] = useState('Sam');
-  const [surname, setSurname] = useState('Fairfax');
-  const [email, setEmail] = useState('www@ggg.ccc');
-  const [phone, setPhone] = useState('02 9282 2833');
-  const [houseName, setHouseName] = useState('1');
-  const [street, setStreet] = useState('Darling Island Road');
-  const [suburb, setSuburb] = useState('Pyrmont');
-  const [state, setAddressState] = useState('NSW');
-  const [postcode, setPostcode] = useState('2009')
-  const [country, setCountry] = useState('Australia');
+  const [givenName, setGivenName] = useState('');
+  const [surname, setSurname] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [houseName, setHouseName] = useState('');
+  const [street, setStreet] = useState('');
+  const [suburb, setSuburb] = useState('');
+  const [state, setAddressState] = useState('');
+  const [postcode, setPostcode] = useState('')
+  const [country, setCountry] = useState('');
   const [imageUrl, setImageUrl] = useState('');
 
 
