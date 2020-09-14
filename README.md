@@ -1,3 +1,13 @@
+This project took approximately 5hours to complete, mainly researching and refamiliarising myself with React as I've been using Vue almost exclusively for the last few years.
+
+A lot has changed since I last used it, but I attempted to do it via hooks over classes, and using CSS Modules for styling.
+
+I also attempted to not use additional libraries or frameworks to show you my direct approach to the problems given.
+ 
+
+---
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

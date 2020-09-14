@@ -1,9 +1,8 @@
-import React, {useRef, useState} from "react";
-import LabelledInput from "./LabelledInput";
+import React, {useState} from "react";
 import styles from './App.module.scss'
 import HCardPreview from "./HCardPreview";
 import {joinStrings, takeValue} from "./utils";
-import Button from "./Button";
+import HCardForm from "./HCardForm";
 
 
 const App = () => {
@@ -20,7 +19,6 @@ const App = () => {
   const [country, setCountry] = useState('Australia');
   const [imageUrl, setImageUrl] = useState('');
 
-  const imageRef = useRef<HTMLInputElement>(null);
 
   // When the file is changed, take the object URL to create a local preview
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,60 +30,34 @@ const App = () => {
     );
   }
 
-  // Trigger hidden input element via UI button
-  const handleInputClick = (e: React.FormEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    imageRef.current?.click();
-  }
 
   return <div className={styles['panel-container']}>
     <div className={styles['form-panel']}>
       <div className={styles['form-container']}>
         <h1>hCard Builder</h1>
-        <form className={styles['form']}>
-          <fieldset className={styles['fieldset']}>
-            <legend className={styles['legend']}>PERSONAL DETAILS</legend>
-            <div className={styles['form-input-group']}>
-              <LabelledInput id='firstName' label="GIVEN NAME" type="text" value={givenName}
-                             onChange={takeValue(setGivenName)}/>
-              <LabelledInput id='surname' label="SURNAME" type="text" value={surname}
-                             onChange={takeValue(setSurname)}/>
-              <LabelledInput id='email' label="EMAIL" type="email" value={email} onChange={takeValue(setEmail)}/>
-              <LabelledInput id='phone' label="PHONE" type="tel" value={phone} onChange={takeValue(setPhone)}/>
-            </div>
-          </fieldset>
-
-          <fieldset className={styles['fieldset']}>
-            <legend className={styles['legend']}>ADDRESS</legend>
-            <div className={styles['form-input-group']}>
-              <LabelledInput id='houseNameOrNumber' label="HOUSE NAME OR #" type="text" value={houseName}
-                             onChange={takeValue(setHouseName)}/>
-              <LabelledInput id='street' label="STREET" type="text" value={street} onChange={takeValue(setStreet)}/>
-              <LabelledInput id='suburb' label="SUBURB" type="text" value={suburb} onChange={takeValue(setSuburb)}/>
-              <LabelledInput id='state' label="STATE" type="text" value={state}
-                             onChange={takeValue(setAddressState)}/>
-              <LabelledInput id='postcode' label="POSTCODE" type="text" value={postcode}
-                             onChange={takeValue(setPostcode)}/>
-              <LabelledInput id='country' label="COUNTRY" type="text" value={country}
-                             onChange={takeValue(setCountry)}/>
-            </div>
-
-          </fieldset>
-
-          <fieldset className={styles['fieldset']}>
-            <div className={styles['form-input-group']}>
-              <Button color='gray' onClick={handleInputClick}>Upload Avatar</Button>
-              <input type="file"
-                     ref={imageRef}
-                     onChange={handleFileChange}
-                     accept="image/png, image/jpg, image/gif, image/bmp"
-                     style={{display: 'none'}}
-
-              />
-              <Button>Create hCard</Button>
-            </div>
-          </fieldset>
-        </form>
+        <HCardForm
+          givenName={givenName}
+          onGivenNameChange={takeValue(setGivenName)}
+          surname={surname}
+          onSurnameChange={takeValue(setSurname)}
+          email={email}
+          onEmailChange={takeValue(setEmail)}
+          phone={phone}
+          onPhoneChange={takeValue(setPhone)}
+          houseName={houseName}
+          onHouseNameChange={takeValue(setHouseName)}
+          street={street}
+          onStreetChange={takeValue(setStreet)}
+          suburb={suburb}
+          onSuburbChange={takeValue(setSuburb)}
+          state={state}
+          onStateChange={takeValue(setAddressState)}
+          postcode={postcode}
+          onPostcodeChange={takeValue(setPostcode)}
+          country={country}
+          onCountryChange={takeValue(setCountry)}
+          onImageFileChange={handleFileChange}
+        />
       </div>
     </div>
     <div className={styles['preview-panel']}>
