@@ -1,0 +1,30 @@
+@import "scss-partials/colors";
+
+.button {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.25em;
+  background-color: $sky-blue;
+  padding: 8px 28px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  box-shadow: 0 2px 0 0 darken($sky-blue, 25%);
+  outline: none;
+
+  &:active{
+    box-shadow: 0 0 0 0 black;
+    transform: translateY(2px);
+  }
+}
+
+.gray-button{
+  @extend .button;
+  background-color: $navy-blue;
+  box-shadow: 0 2px 0 0 darken($navy-blue, 25%);
+}
+
+.blue-button{
+  @extend .button;
+  background-color: $sky-blue;
+  box-shadow: 0 2px 0 0 darken($sky-blue, 25%);
+}

@@ -1,0 +1,83 @@
+@import "scss-partials/colors";
+
+$box-shadow: 0 2px 0px 1px $light-gray-2;
+
+.container {
+  min-height: 300px;
+  width: 100%;
+  background-color: white;
+  box-shadow: $box-shadow;
+}
+
+
+.name-content {
+  height: 100px;
+  background-color: $navy-blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.name {
+  color: white;
+  font-family: Merriweather, serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.picture {
+  padding: 10px;
+  background-color: white;
+  transform: translateY(25px) translateX(-15px);
+  box-shadow: $box-shadow;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-picture {
+  width: 75px;
+  height: 95px;
+  background-color: gray;
+  background-position: center center;
+  background-size: cover;
+}
+
+.text-content{
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-bottom: 25px;
+}
+
+.text-row {
+  border-bottom: 1px solid $light-gray-2;
+  display: flex;
+}
+
+.entry-container{
+  display: inline-flex;
+  height: 2em;
+  flex: 1 0.5 auto;
+}
+
+.text {
+  font-size: 1em;
+  display: flex;
+  align-items: flex-end;
+}
+
+.label {
+  width: 75px;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 0.625em;
+
+  display: flex;
+  align-items: flex-end;
+  color: $navy-blue;
+  flex-shrink: 0;
+}
+

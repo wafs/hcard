@@ -1,0 +1,20 @@
+@import "scss-partials/colors";
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: $navy-blue;
+  font-size: 0.75em;
+  padding-bottom: 5px;
+}
+
+.input {
+  font-size: 1em;
+  font-family: 'Merriweather', serif;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
