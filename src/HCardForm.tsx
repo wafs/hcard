@@ -1,5 +1,5 @@
 import React, {useRef} from "react";
-import styles from "./App.module.scss";
+import styles from "./HCardForm.module.scss";
 import LabelledInput from "./LabelledInput";
 import Button from "./Button";
 
